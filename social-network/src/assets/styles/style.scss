@@ -11,6 +11,21 @@
   color: white;
 }
 
+.empty-layout{
+  display:-webkit-flex;
+  display:-ms-flexbox;
+  display:flex;
+  -webkit-flex-direction:column;
+  -ms-flex-direction:column;
+  flex-direction:column;
+  -webkit-align-items:center;
+  -ms-flex-align:center;
+  align-items:center;
+  padding-top: 10vh;
+  height: 100vh;
+  background-color: #F6F6F6;
+}
+
 .main {
   height: 86vh;
   background-color: #F6F6F6;
@@ -57,4 +72,28 @@
   border-radius: 5px;
   box-shadow: 2px 2px 35px 14px rgba(13, 13, 13, 0.04);
   color: $dark-text-color;
+}
+
+.auth-card{
+  width: 35%;
+}
+
+.card-title {
+  text-align: center;
+}
+
+.name-input, .fullname-input {
+  width: 40%;
+}
+
+.auth-submit{
+  width: 100%;
+}
+
+.input-field {
+  margin-top: 0;
+}
+
+.helper-text.invalid{
+  color:#f44336
 }

@@ -54,6 +54,18 @@ const router = new VueRouter({
       meta: { layout: 'main' },
       component: () => import('../views/Music.vue'),
     },
+    {
+      path: '/login',
+      name: 'login',
+      meta: { layout: 'empty' },
+      component: () => import('../views/Login.vue'),
+    },
+    {
+      path: '/registration',
+      name: 'registration',
+      meta: { layout: 'empty' },
+      component: () => import('../views/Registration.vue'),
+    },
   ],
 });
 

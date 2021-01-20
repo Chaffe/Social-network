@@ -2,7 +2,11 @@
   <header class="header">
     <div class="header__wrapper wrapper">
       <div class="brand-logo">Logo</div>
-      <button class="btn-small">Log in</button>
+      <router-link
+        to='/login'
+      >
+        <button class="btn-small">Log in</button>
+      </router-link>
     </div>
   </header>
 </template>
