@@ -5,10 +5,12 @@
       <div class="input-field">
         <input
             id="email"
-            type="text"
+            type="email"
             class="validate"
+            placeholder="Email"
+            required
         >
-        <label for="email">Email</label>
+        <!-- <label for="email">Email</label> -->
         <!-- <small class="helper-text invalid">Email</small> -->
       </div>
       <div class="input-field">
@@ -16,8 +18,10 @@
             id="password"
             type="password"
             class="validate"
+            placeholder="Password"
+            required
         >
-        <label for="password">Password</label>
+        <!-- <label for="password">Password</label> -->
         <!-- <small class="helper-text invalid">Password</small> -->
       </div>
       <p>

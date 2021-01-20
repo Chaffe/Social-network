@@ -8,8 +8,10 @@
             id="name"
             type="text"
             class="validate"
+            placeholder="Name"
+            required
         >
-        <label for="name">Name</label>
+        <!-- <label for="name">Name</label> -->
         <!-- <small class="helper-text invalid">Name</small> -->
       </div>
       <div class="input-field fullname-input">
@@ -17,17 +19,21 @@
             id="fullname"
             type="text"
             class="validate"
+            placeholder="Fullname"
+            required
         >
-        <label for="fullname">Fullname</label>
+        <!-- <label for="fullname">Fullname</label> -->
         <!-- <small class="helper-text invalid">Name</small> -->
       </div>
       </div>
       <div class="input-field">
         <input
             id="email"
-            type="text"
+            type="email"
+            placeholder="Email"
+            required
         >
-        <label for="email">Email</label>
+        <!-- <label for="email">Email</label> -->
         <!-- <small class="helper-text invalid">Email</small> -->
       </div>
       <div class="input-field">
@@ -35,20 +41,22 @@
             id="password"
             type="password"
             class="validate"
+            placeholder="Password"
+            required
         >
-        <label for="password">Password</label>
+        <!-- <label for="password">Password</label> -->
         <!-- <small class="helper-text invalid">Password</small> -->
       </div>
       <div class="input-field birthday-select-container">
         <label class="birthday-select-title">Date of Birth</label>
         <div class="birthday-select-wrapper">
-          <select class="select-day select" name="day" id="day">
+          <select class="select-day select" name="day" id="day" required>
             <option value="1">1</option>
           </select>
-          <select class="select-month select" name="month" id="month">
+          <select class="select-month select" name="month" id="month" required>
             <option value="January">January</option>
           </select>
-          <select class="select-year select" name="year" id="year">
+          <select class="select-year select" name="year" id="year" required>
             <option value="2021">2021</option>
           </select>
         </div>
@@ -58,13 +66,13 @@
         <div class="sex-wrapper">
           <p>
             <label>
-              <input class="with-gap" name="group1" type="radio"  />
+              <input class="with-gap" name="group1" type="radio" required />
               <span>Man</span>
             </label>
           </p>
           <p>
             <label>
-              <input class="with-gap" name="group1" type="radio"  />
+              <input class="with-gap" name="group1" type="radio" required />
               <span>Woman</span>
             </label>
           </p>
@@ -72,7 +80,7 @@
       </div>
         <p>
         <label>
-          <input type="checkbox" />
+          <input type="checkbox" required />
           <span>I agree with the rules</span>
         </label>
       </p>
