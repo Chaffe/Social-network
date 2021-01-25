@@ -8,10 +8,9 @@
             id="name"
             type="text"
             class="validate"
-            placeholder="Name"
             required
         >
-        <!-- <label for="name">Name</label> -->
+        <label for="name">Name</label>
         <!-- <small class="helper-text invalid">Name</small> -->
       </div>
       <div class="input-field fullname-input">
@@ -19,10 +18,9 @@
             id="fullname"
             type="text"
             class="validate"
-            placeholder="Fullname"
             required
         >
-        <!-- <label for="fullname">Fullname</label> -->
+        <label for="fullname">Fullname</label>
         <!-- <small class="helper-text invalid">Name</small> -->
       </div>
       </div>
@@ -30,10 +28,9 @@
         <input
             id="email"
             type="email"
-            placeholder="Email"
             required
         >
-        <!-- <label for="email">Email</label> -->
+        <label for="email">Email</label>
         <!-- <small class="helper-text invalid">Email</small> -->
       </div>
       <div class="input-field">
@@ -41,10 +38,9 @@
             id="password"
             type="password"
             class="validate"
-            placeholder="Password"
             required
         >
-        <!-- <label for="password">Password</label> -->
+        <label for="password">Password</label>
         <!-- <small class="helper-text invalid">Password</small> -->
       </div>
       <div class="input-field birthday-select-container">
