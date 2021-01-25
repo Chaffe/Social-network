@@ -9,6 +9,7 @@
 <script>
 import MainLayout from '@/layouts/MainLayout.vue';
 import EmptyLayout from '@/layouts/EmptyLayout.vue';
+import 'materialize-css/dist/js/materialize.min';
 
 export default {
   components: {

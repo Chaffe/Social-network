@@ -2,44 +2,74 @@
   <header class="header">
     <div class="header__wrapper wrapper">
       <div class="brand-logo">Logo</div>
-      <div class="header__buttons">
-        <router-link
-        to='/login'
-      >
-        <button class="btn-small">Log in</button>
-      </router-link>
-      <router-link
-        to='/registration'
-      >
-        <button class="btn-small">Log up</button>
-      </router-link>
+      <div class="header__button">
+        <a
+          class="dropdown-trigger white-text"
+          href="#"
+          data-target="dropdown"
+          ref="dropdown"
+        >
+          USER NAME
+          <i class="material-icons right">arrow_drop_down</i>
+        </a>
+        <ul id="dropdown" class="dropdown-content">
+          <li>
+            <router-link to="/" class="black-text">
+              <i class="material-icons">account_circle</i>Profile
+            </router-link>
+          </li>
+          <li class="divider" tabindex="-1"></li>
+          <li>
+            <a href="#" class="black-text" @click.prevent="logout">
+              <i class="material-icons">assignment_return</i>Log out
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
   </header>
 </template>
 
 <style lang="scss" scoped>
-@import '@/assets/styles/constants.scss';
+@import "@/assets/styles/constants.scss";
 
-  .header {
-    height: 7vh;
-    background-color: $primary-color;
-  }
+.header {
+  height: 7vh;
+  background-color: $primary-color;
+}
 
-  .header__wrapper {
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+.header__wrapper {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-  .brand-logo {
-    width: 10%;
-  }
+.brand-logo {
+  width: 10%;
+}
 
-  .header__buttons {
-    display: flex;
-    justify-content: space-between;
-    width: 15%;
-  }
+.dropdown-trigger {
+  display: block;
+}
+
+.dropdown-content li > a > i {
+  margin-right: 10px;
+}
 </style>
+
+<script>
+export default {
+  methods: {
+    logout() {
+      console.log('Logout');
+      this.$router.push('/login?message=logout');
+    },
+  },
+  mounted() {
+    window.M.Dropdown.init(this.$refs.dropdown, {
+      constrainWidth: true,
+    });
+  },
+};
+</script>
