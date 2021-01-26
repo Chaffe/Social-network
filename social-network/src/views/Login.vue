@@ -4,37 +4,57 @@
       <span class="card-title">Social Network</span>
       <div class="input-field">
         <input
-            id="email"
-            type="email"
-            class="validate"
-            required
-        >
+          id="email"
+          type="text"
+          v-model.trim="email"
+          :class="{
+            invalid:
+              ($v.email.$dirty && !$v.email.required) ||
+              ($v.email.$dirty && !$v.email.email),
+          }"
+        />
         <label for="email">Email</label>
-        <!-- <small class="helper-text invalid">Email</small> -->
+        <small
+          class="helper-text invalid"
+          v-if="$v.email.$dirty && !$v.email.required"
+        >The email imput must not be empty.</small>
+        <small
+          class="helper-text invalid"
+          v-if="$v.email.$dirty && !$v.email.email"
+        >Enter correct email.</small>
       </div>
       <div class="input-field">
         <input
-            id="password"
-            type="password"
-            class="validate"
-            required
-        >
+          id="password"
+          type="password"
+          v-model.trim="password"
+          :class="{
+            invalid:
+              ($v.password.$dirty && !$v.password.required) ||
+              ($v.password.$dirty && !$v.password.minLength),
+          }"
+        />
         <label for="password">Password</label>
-        <!-- <small class="helper-text invalid">Password</small> -->
+        <small
+          class="helper-text invalid"
+          v-if="$v.password.$dirty && !$v.password.required"
+        >Enter password.</small>
+        <small
+          class="helper-text invalid"
+          v-else-if="$v.password.$dirty && !$v.password.minLength"
+        >Password must be {{ $v.password.$params.minLength.min }}
+        characters. Now it is {{ password.length }}.</small>
       </div>
       <p>
         <label>
-          <input type="checkbox">
+          <input type="checkbox" />
           <span>Remember password</span>
         </label>
       </p>
     </div>
     <div class="card-action">
       <div>
-        <button
-            class="btn waves-effect waves-light auth-submit"
-            type="submit"
-        >
+        <button class="btn waves-effect waves-light auth-submit" type="submit">
           Log In
           <i class="material-icons right">send</i>
         </button>
@@ -42,9 +62,7 @@
 
       <p class="center">
         Don't have an account?
-        <router-link
-          to="/registration"
-        >
+        <router-link to="/registration">
           <a href="/">Sign up</a>
         </router-link>
       </p>
@@ -53,10 +71,31 @@
 </template>
 
 <script>
+import { email, required, minLength } from 'vuelidate/lib/validators';
+
 export default {
   name: 'login',
+  data: () => ({
+    email: '',
+    password: '',
+  }),
+  validations: {
+    email: { email, required },
+    password: { required, minLength: minLength(6) },
+  },
   methods: {
     submitHandler() {
+      if (this.$v.$invalid) {
+        this.$v.$touch();
+        return;
+      }
+
+      const formData = {
+        email: this.email,
+        password: this.password,
+      };
+
+      console.log(formData);
       this.$router.push('/');
     },
   },
