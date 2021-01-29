@@ -17,11 +17,13 @@
         <small
           class="helper-text invalid"
           v-if="$v.email.$dirty && !$v.email.required"
-        >The email imput must not be empty.</small>
+          >The email imput must not be empty.</small
+        >
         <small
           class="helper-text invalid"
           v-if="$v.email.$dirty && !$v.email.email"
-        >Enter correct email.</small>
+          >Enter correct email.</small
+        >
       </div>
       <div class="input-field">
         <input
@@ -38,12 +40,14 @@
         <small
           class="helper-text invalid"
           v-if="$v.password.$dirty && !$v.password.required"
-        >Enter password.</small>
+          >Enter password.</small
+        >
         <small
           class="helper-text invalid"
           v-else-if="$v.password.$dirty && !$v.password.minLength"
-        >Password must be {{ $v.password.$params.minLength.min }}
-        characters. Now it is {{ password.length }}.</small>
+          >Password must be {{ $v.password.$params.minLength.min }} characters.
+          Now it is {{ password.length }}.</small
+        >
       </div>
       <p>
         <label>
@@ -72,6 +76,7 @@
 
 <script>
 import { email, required, minLength } from 'vuelidate/lib/validators';
+import messages from '@/utils/messages';
 
 export default {
   name: 'login',
@@ -83,11 +88,16 @@ export default {
     email: { email, required },
     password: { required, minLength: minLength(6) },
   },
+  mounted() {
+    if (messages[this.$route.query.message]) {
+      this.$message(messages[this.$route.query.message]);
+    }
+  },
   methods: {
-    submitHandler() {
+    async submitHandler() {
       if (this.$v.$invalid) {
         this.$v.$touch();
-        return;
+        return null;
       }
 
       const formData = {
@@ -95,9 +105,19 @@ export default {
         password: this.password,
       };
 
+      await this.$store.dispatch('login', formData);
+
       console.log(formData);
       this.$router.push('/');
+
+      return;
     },
   },
 };
 </script>
+
+<style lang="scss" scoped>
+.auth-card {
+  margin-top: 15vh;
+}
+</style>

@@ -31,7 +31,6 @@ export default {
   name: 'Footer',
   methods: {
     followLink() {
-      console.log(document.querySelector('.rss-logo'));
       document.querySelector('.rss-logo').addEventListener('click', () => {
         document.location.href = 'https://rs.school/js/';
       });
