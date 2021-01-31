@@ -17,13 +17,13 @@ Vue.use(messagePlugin);
 Vue.use(Vuelidate);
 
 firebase.initializeApp({
-  apiKey: 'AIzaSyCMW9R6pDxZao_ffoZhdbCj7Ib-D4sqOQ8',
-  authDomain: 'social-network-6a515.firebaseapp.com',
-  projectId: 'social-network-6a515',
-  storageBucket: 'social-network-6a515.appspot.com',
-  messagingSenderId: '690142104193',
-  appId: '1:690142104193:web:b36902356df1b107d2db80',
-  measurementId: 'G-4105WZEY3Y',
+  apiKey: 'AIzaSyB5aR8nQZ89bEKD33JvJca0cJAIdMLrg-Y',
+  authDomain: 'social-network-1a614.firebaseapp.com',
+  projectId: 'social-network-1a614',
+  storageBucket: 'social-network-1a614.appspot.com',
+  messagingSenderId: '1014769189535',
+  appId: '1:1014769189535:web:dad25796f6cf1bc7d458aa',
+  measurementId: 'G-S0ZRS2W4LB',
 });
 
 let app;
