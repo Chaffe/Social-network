@@ -9,7 +9,7 @@
               Chaffe
             </a>
           </li>
-          <li class="nickname-item">
+          <!-- <li class="nickname-item">
             <a href="https://github.com/alex-beaverg" class="github-link">
               Alex_BeaveRG
             </a>
@@ -18,7 +18,7 @@
             <a href="https://github.com/SPARSEKING" class="github-link">
               SPARSEKING
             </a>
-          </li>
+          </li> -->
         </ul>
         <span>2021</span>
       </div>
@@ -65,7 +65,7 @@ export default {
   }
 
   .developer-info {
-    width: 30%;
+    width: 10%;
     display: flex;
     justify-content: space-between;
     align-items: center;
