@@ -2,13 +2,11 @@
   <div class="columns__wrapper">
     <div class="wide-column column">
       <div class="wide-column__wrapper">
-        WideColumn
         <h2>Videos</h2>
       </div>
     </div>
     <div class="narrow-column column">
       <div class="narrow-column__wrapper">
-        NarrowColumn
       </div>
     </div>
   </div>
@@ -18,3 +16,11 @@
 @import '@/assets/styles/constants.scss';
 
 </style>
+
+<script>
+export default {
+  metaInfo: {
+    title: 'Videos | Social-network',
+  },
+};
+</script>

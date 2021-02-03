@@ -12,6 +12,11 @@ import Main from '@/components/Main/Main.vue';
 import Footer from '@/components/Footer.vue';
 
 export default {
+  async mounted() {
+    if (!Object.keys(this.$store.getters.info).length) {
+      await this.$store.dispatch('fetchInfo');
+    }
+  },
   components: {
     Header, Main, Footer,
   },

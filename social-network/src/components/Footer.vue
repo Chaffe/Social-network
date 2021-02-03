@@ -9,18 +9,18 @@
               Chaffe
             </a>
           </li>
-          <li class="nickname-item">
+          <!-- <li class="nickname-item">
             <a href="https://github.com/alex-beaverg" class="github-link">
               Alex_BeaveRG
             </a>
           </li>
           <li class="nickname-item">
-            <a href="#" class="github-link">
-              Kirill(?)
+            <a href="https://github.com/SPARSEKING" class="github-link">
+              SPARSEKING
             </a>
-          </li>
+          </li> -->
         </ul>
-        <span>2020</span>
+        <span>2021</span>
       </div>
     </div>
   </footer>
@@ -31,10 +31,8 @@ export default {
   name: 'Footer',
   methods: {
     followLink() {
-      console.log(document.querySelector('.rss-logo'));
       document.querySelector('.rss-logo').addEventListener('click', () => {
         document.location.href = 'https://rs.school/js/';
-        console.log(123);
       });
     },
   },
@@ -67,7 +65,7 @@ export default {
   }
 
   .developer-info {
-    width: 25%;
+    width: 10%;
     display: flex;
     justify-content: space-between;
     align-items: center;
