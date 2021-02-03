@@ -79,6 +79,9 @@ import { email, required, minLength } from 'vuelidate/lib/validators';
 import messages from '@/utils/messages';
 
 export default {
+  metaInfo: {
+    title: 'Login | Social-network',
+  },
   name: 'login',
   data: () => ({
     email: '',

@@ -234,6 +234,9 @@ import {
 import dateOptions from '@/render/dateOfBirth';
 
 export default {
+  metaInfo: {
+    title: 'Registration | Social-network',
+  },
   name: 'registration',
   data: () => ({
     dates: dateOptions(),

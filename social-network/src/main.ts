@@ -1,4 +1,5 @@
 import Vue from 'vue';
+import VueMeta from 'vue-meta';
 import Vuelidate from 'vuelidate';
 import firebase from 'firebase/app';
 import App from './App.vue';
@@ -15,6 +16,7 @@ Vue.config.productionTip = false;
 
 Vue.use(messagePlugin);
 Vue.use(Vuelidate);
+Vue.use(VueMeta);
 
 firebase.initializeApp({
   apiKey: 'AIzaSyB5aR8nQZ89bEKD33JvJca0cJAIdMLrg-Y',
