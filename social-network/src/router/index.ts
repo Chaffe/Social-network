@@ -26,9 +26,9 @@ const router = new VueRouter({
   routes: [
     {
       path: '/',
-      name: 'profile',
-      meta: { layout: 'main' },
-      component: () => import('../views/Profile.vue'),
+      name: 'login',
+      meta: { layout: 'empty' },
+      component: () => import('../views/Login.vue'),
     },
     {
       path: '/messenger',
@@ -55,10 +55,10 @@ const router = new VueRouter({
       component: () => import('../views/Music.vue'),
     },
     {
-      path: '/login',
-      name: 'login',
-      meta: { layout: 'empty' },
-      component: () => import('../views/Login.vue'),
+      path: '/profile',
+      name: 'profile',
+      meta: { layout: 'main' },
+      component: () => import('../views/Profile.vue'),
     },
     {
       path: '/registration',

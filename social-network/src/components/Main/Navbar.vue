@@ -22,7 +22,7 @@
 export default {
   data: () => ({
     links: [
-      { title: 'Profile', url: '/', exact: true },
+      { title: 'Profile', url: '/profile', exact: true },
       { title: 'Messenger', url: '/messenger' },
       { title: 'Photos', url: '/photos' },
       { title: 'Videos', url: '/videos' },

@@ -14,7 +14,7 @@
         </a>
         <ul id="dropdown" class="dropdown-content">
           <li>
-            <router-link to="/" class="black-text">
+            <router-link to="/profile" class="black-text">
               <i class="material-icons">account_circle</i>Profile
             </router-link>
           </li>

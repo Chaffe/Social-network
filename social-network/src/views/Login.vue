@@ -109,9 +109,7 @@ export default {
       };
 
       await this.$store.dispatch('login', formData);
-
-      console.log(formData);
-      this.$router.push('/');
+      this.$router.push('/profile');
 
       return;
     },
