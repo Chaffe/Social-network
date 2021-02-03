@@ -215,7 +215,7 @@
       </div>
       <p class="center">
         Already have an account?
-        <router-link to="/login">
+        <router-link to="/">
           <a href="#">Sign In!</a>
         </router-link>
       </p>

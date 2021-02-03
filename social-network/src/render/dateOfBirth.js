@@ -32,6 +32,4 @@ function renderDateOfBirth() {
   return dateOptions;
 }
 
-// module.exports = renderDateOfBirth;
-
 export default renderDateOfBirth;
